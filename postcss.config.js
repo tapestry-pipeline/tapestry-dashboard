@@ -4,6 +4,7 @@ content: [
 "./src/**/*.html",
 "./src/**/*.vue",
 "./src/**/*.jsx",
+"./src/*.js"
 ],
 // Include any special characters you're using in this regular expression
 });
@@ -11,6 +12,6 @@ module.exports = {
 plugins: [
 require("tailwindcss"),
 require("autoprefixer"),
-...(process.env.NODE_ENV == "production" ? [purgecss] : []),
+...(process.env.NODE_ENV === "production" ? [purgecss] : []),
 ],
 };
