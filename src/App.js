@@ -12,17 +12,17 @@ function App() {
     return (
         <Router>
             <div className="flex flex-no-wrap">
-                <Sidebar /> 
-                <main className="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6">
-                  <Switch>
-                    {/* <Route exact path="/" component={Home} />  */}
-                    <Route exact path="/airbyte" component={Airbyte} /> 
-                    <Route exact path="/snowflake" component={Snowflake} /> 
-                    {/* <Route exact path="/grouparoo" component={Grouparoo} />  */}
-                    <Route exact path="/dbt" component={Dbt} /> 
-                    {/* <Route exact path="/documentation" component={Documentation} />  */}
-                  </Switch>
-                </main>
+              <Sidebar /> 
+              <main className="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6">
+                <Switch>
+                  {/* <Route exact path="/" component={Home} />  */}
+                  <Route exact path="/airbyte" component={Airbyte} /> 
+                  <Route exact path="/snowflake" component={Snowflake} /> 
+                  {/* <Route exact path="/grouparoo" component={Grouparoo} />  */}
+                  <Route exact path="/dbt" component={Dbt} /> 
+                  {/* <Route exact path="/documentation" component={Documentation} />  */}
+                </Switch>
+              </main>
             </div>
         </Router> 
     );
