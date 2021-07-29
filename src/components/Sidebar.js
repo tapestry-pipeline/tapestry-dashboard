@@ -1,5 +1,5 @@
 import React from "react";
-// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
     return (
@@ -14,6 +14,8 @@ const Sidebar = () => {
           </svg>
       </div>
       <ul className="mt-12">
+
+        <Link to="/">
           <li className="flex w-full justify-between text-gray-300 hover:text-gray-500 cursor-pointer items-center mb-6">
               <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -27,6 +29,8 @@ const Sidebar = () => {
               </div>
               <div className="py-1 px-3 bg-gray-700 rounded text-gray-500 flex items-center justify-center text-xs">5</div>
           </li>
+        </Link>
+        <Link to="/airbyte">
           <li className="flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center mb-6">
               <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-puzzle" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -37,6 +41,8 @@ const Sidebar = () => {
               </div>
               <div className="py-1 px-3 bg-gray-700 rounded text-gray-500 flex items-center justify-center text-xs">8</div>
           </li>
+        </Link>
+        <Link to="/snowflake">
           <li className="flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center mb-6">
               <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-compass" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -47,6 +53,9 @@ const Sidebar = () => {
                   <span className="text-sm  ml-2">Snowflake</span>
               </div>
           </li>
+        </Link>
+        
+        <Link to="/grouparoo">
           <li className="flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center mb-6">
               <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -58,6 +67,9 @@ const Sidebar = () => {
                   <span className="text-sm  ml-2">Grouparoo</span>
               </div>
           </li>
+        </Link>
+
+        <Link to="/dbt">
           <li className="flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center mb-6">
               <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-puzzle" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -68,6 +80,9 @@ const Sidebar = () => {
               </div>
               <div className="py-1 px-3 bg-gray-700 rounded text-gray-500 flex items-center justify-center text-xs">25</div>
           </li>
+        </Link>
+        
+        <Link to="/documentation">
           <li className="flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center">
               <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-settings" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -78,6 +93,8 @@ const Sidebar = () => {
                   <span className="text-sm  ml-2">Documentation</span>
               </div>
           </li>
+        </Link>
+        
       </ul>
   </div>
 </div>

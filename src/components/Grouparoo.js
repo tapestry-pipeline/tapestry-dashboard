@@ -2,7 +2,9 @@ import React from "react";
 
 const Grouparoo = () => {
     return (
-        console.log('hi')
+      <>
+        <h1>Grouparoo</h1>
+      </>
     );
 };
 
