@@ -7,6 +7,7 @@ import AllCards from "./AllCards.js"
 import LoadingPage from "./LoadingPage.js";
 import { appendFile } from "fs";
 import Logs from "./Logs.js"
+import CpuGraph from "./CpuGraph.js"
  //     {/* <AllCards cards={cards}/> */}
 
 
@@ -58,6 +59,7 @@ const MonitorPage = ({ toolTitle }) => {
       <a href={dns} target="_blank">Airbyte Link Here</a>
       <AllCards cards={cards}/>
     </div>
+    <CpuGraph toolTitle={toolTitle}/>
     <Logs toolTitle={toolTitle}/>
     </>
   )
