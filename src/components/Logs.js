@@ -11,7 +11,7 @@ const Logs = ({ toolTitle }) => {
     return await axios.get(`http://localhost:7777/api/${toolTitle}/getlogs`)
     .then(({data}) => {
       console.log(data)
-      setLogs(toolTitle);
+      setLogs(data);
     })
     .catch(error => {
       console.log(error)
@@ -19,7 +19,7 @@ const Logs = ({ toolTitle }) => {
   }
 
   useEffect(() => {
-    getLogs()
+    getLogs(toolTitle)
   }, []);
 
   return <>
