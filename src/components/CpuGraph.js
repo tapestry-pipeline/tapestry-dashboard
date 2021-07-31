@@ -24,7 +24,7 @@ const CpuGraph = ({ toolTitle }) => {
   const mockData = [
     {
       Timestamp: '2021-07-30T22:24:00+00:00',
-      Average: 1.5109026821159806,
+      Average: 2.5109026821159806,
       Unit: 'Percent'
     },
     {
@@ -64,7 +64,7 @@ const CpuGraph = ({ toolTitle }) => {
     },
     {
       Timestamp: '2021-07-30T21:09:00+00:00',
-      Average: 1.6840449507579114,
+      Average: 4.6840449507579114,
       Unit: 'Percent'
     },
     {
@@ -74,27 +74,14 @@ const CpuGraph = ({ toolTitle }) => {
     }
   ]
 
-  // const testData = mockData.map(obj => obj.Average.toFixed(2))
+  const sortedData = mockData.sort((a, b) => Date.parse(a.Timestamp) - Date.parse(b.Timestamp)); 
 
-  // function compare(a, b) {
-  //   const averageA = a.Timestamp;
-  //   const averageB = b.Timestamp;
-  
-  //   let comparison = 0;
-  //   if (averageA > averageB) {
-  //     comparison = 1;
-  //   } else if (averageA < averageB) {
-  //     comparison = -1;
-  //   }
-  //   return comparison;
-  // }
-  
-  // let sortedData = mockData.sort(compare);
-
-  let sortedData = mockData.sort((a, b) => b.Timestamp - a.Timestamp); 
-  console.log(sortedData); 
   const yAxisData = sortedData.map(obj => obj.Average.toFixed(2)); 
-  const xAxisData = sortedData.map(obj => obj.Timestamp);
+  const xAxisData = sortedData.map(obj => {
+    const currentHours = (new Date().getTime()/3600000).toFixed(0);
+    const hours = (new Date(obj.Timestamp).getTime()/3600000).toFixed(0); 
+    return currentHours - hours; 
+  })
 
 
   const mockData_trans = {
@@ -102,55 +89,53 @@ const CpuGraph = ({ toolTitle }) => {
     datasets: [
       {
         label: "CPU Average Usage",
-        fill: false,
+        fill: true,
         lineTension: 0.25,
         backgroundColor: "rgba(49, 196, 141)",
         borderColor: "rgba(49, 196, 141)",
         borderWidth: 2,
-         data: yAxisData,
+        data: yAxisData,
       }
     ],
   };
 
+  const chartOptions = { 
+    plugins: {
+      title: {
+        display: false,
+        text: "Over Last 6 Hours"
+      }, 
+      legend: {
+        display: false,
+        position: 'right'
+      }
+    }, 
+    scales: {
+      y: {
+        title: {
+          display: true,
+          text: 'Percentage Used'
+        }, 
+        min: 0,
+        max: 100
+      },
+      x: {
+        title: {
+          display: true, 
+          text: 'Hours Ago' 
+        }
+      },      
+    }
+  }
+
   return (
     <div>
       <h3 className="text-lg leading-6 font-medium text-gray-900">
-          Last 6 Hours
+          CPU Utilization
       </h3>
       <Line
         data={mockData_trans}
-        options={{
-          title: {
-            display: true,
-            text: "CPU Utilization",
-            fontSize: 20,
-            fontStyle: "normal",
-            fontColor: "rgba(17, 24, 39)",
-          },
-          legend: {
-            display: true,
-            position: "right",
-          },
-          scales: {
-            yAxes: [
-              {
-                scaleLabel: {
-                  display: true,
-                  labelString: "Percentage Used",
-                },
-              },
-            ],
-            xAxes: [
-              {
-                type: 'time', 
-                scaleLabel: {
-                  display: true,
-                  labelString: "Timestamp",
-                },
-              },
-            ],
-          },
-        }}
+        options={chartOptions}
       />
     </div>
   );
