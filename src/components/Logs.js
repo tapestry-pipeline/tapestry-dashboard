@@ -6,8 +6,8 @@ const Logs = ({ toolTitle }) => {
   const [logs, setLogs] = useState([]);
 
   const styles = {
-    width: "400px",
-    height: "400px",
+    width: "1000px",
+    height: "1000px",
     overflow: "scroll",
   }
 
@@ -32,7 +32,7 @@ const Logs = ({ toolTitle }) => {
 
   return (
     <div >
-      <div className="overflow-y-scroll">
+      <div style={styles}>
         {logs.map(logLine => {
           return <p>{logLine}</p>;
         })}

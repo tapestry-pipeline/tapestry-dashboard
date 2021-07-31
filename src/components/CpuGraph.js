@@ -91,16 +91,11 @@ const CpuGraph = ({ toolTitle }) => {
   
   // let sortedData = mockData.sort(compare);
 
-  let sortedData = mockData.sort((a, b) => a.Timestamp - b.Timestamp); 
+  let sortedData = mockData.sort((a, b) => b.Timestamp - a.Timestamp); 
+  console.log(sortedData); 
   const yAxisData = sortedData.map(obj => obj.Average.toFixed(2)); 
   const xAxisData = sortedData.map(obj => obj.Timestamp);
-  // TRIALS BELOW HERE
-  // let finalAverages = [];
 
-  // for (let i=0; i < sortedData.length; i++) {
-
-  // }
-  // sortedData
 
   const mockData_trans = {
     labels: xAxisData,
