@@ -54,18 +54,19 @@ const MonitorPage = ({ toolTitle }) => {
 
   return (
     <>
-    <div className="w-full h-full rounded">
+    <div className="w-auto h-auto rounded">
       <h1>{toolTitle.toUpperCase()}</h1>
-      <a href={dns} target="_blank">Airbyte Link Here</a>
+      <a href={dns} target="_blank">Airbyte Link Here</a> 
       <AllCards cards={cards}/>
     </div>
-    <CpuGraph toolTitle={toolTitle}/>
-    <Logs toolTitle={toolTitle}/>
+    <div class="grid grid-rows-2 grid-cols-1 gap-4 place-content-around">
+      <CpuGraph toolTitle={toolTitle}/>
+      <Logs toolTitle={toolTitle}/>
+    </div>
+     
+    
     </>
   )
 }
-
-// we'll talk after so we can listen
-// sounds good
 
 export default MonitorPage; 

@@ -12,7 +12,7 @@ import MonitorPage from "./components/MonitorPage.js";
 
 function App() {
     return (
-      <div className="flex flex-no-wrap">
+      <div className="flex flex-no-wrap h-screen">
         <Sidebar /> 
         <main className="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6">
           <Switch>

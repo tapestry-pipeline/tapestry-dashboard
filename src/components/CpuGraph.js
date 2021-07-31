@@ -31,9 +31,9 @@ const CpuGraph = ({ toolTitle }) => {
   const yAxisData = sortedData.map(obj => obj.Average.toFixed(2));
 
   const xAxisData = sortedData.map(obj => {
-    const currentHours = (new Date().getTime()/3600000).toFixed(2);
-    const hours = (new Date(obj.Timestamp).getTime()/3600000).toFixed(2); 
-    return currentHours - hours; 
+    const currentHours = (new Date().getTime()/3600000);
+    const hours = (new Date(obj.Timestamp).getTime()/3600000); 
+    return (currentHours - hours).toFixed(2); 
   })
 
   const transformedData = {
@@ -43,8 +43,8 @@ const CpuGraph = ({ toolTitle }) => {
         label: "CPU Average Usage",
         fill: true,
         lineTension: 0.25,
-        backgroundColor: "rgba(49, 196, 141)",
-        borderColor: "rgba(49, 196, 141)",
+        backgroundColor: "#9579fd",
+        borderColor: "r#9579fd",
         borderWidth: 2,
         data: yAxisData,
       }
