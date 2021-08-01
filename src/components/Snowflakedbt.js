@@ -56,10 +56,11 @@ const Snowflakedbt = () => {
           sourceTables={sourceTables}
           transformedTables={transformedTables}
         /> 
-      </div>
-      <SnowflakeHistory
+        <SnowflakeHistory
           history={history}
-      /> 
+        /> 
+      </div>
+      
     </>
   )
 };

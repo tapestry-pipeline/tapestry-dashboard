@@ -7,16 +7,15 @@ const SnowflakeHistory = ({history}) => {
       <table class="w-full table-auto">
         <thead>
           <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal sticky top-0">
-          { Object.keys(history[0]).forEach(header => {
+          { Object.keys(history[0]).map(header => (
               <th class="py-3 px-6 text-left">{header}</th>
-            }
-          )}    
+          ))}    
           </tr>
         </thead>
         <tbody class="text-gray-600 text-sm font-light overflow-y-auto">
-          { history.forEach(query => {
-            <tr class="border-b border-gray-200 hover:bg-gray-100">
-            { Object.values(query).forEach(value => {
+          { history.map((query, index) => (
+            <tr key={index} class="border-b border-gray-200 hover:bg-gray-100">
+            { Object.values(query).map(value => (
               <td class="py-3 px-6 text-left whitespace-normal">
                 <div class="flex items-center">
                   <div class="mr-2">
@@ -24,10 +23,9 @@ const SnowflakeHistory = ({history}) => {
                   </div>
                 </div>
               </td>
-              })
-            }
+            ))}
             </tr>
-          })}
+          ))}
         </tbody>
         </table>
     </div>
