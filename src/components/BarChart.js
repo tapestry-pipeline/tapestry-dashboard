@@ -2,8 +2,6 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 
 const BarChart = ({sourceTablesCount, transformedTablesCount}) => {
-  console.log(sourceTablesCount); 
-  console.log(transformedTablesCount); 
   const data = {
     labels: ['Source Tables', 'Transformed Tables'],
     datasets: [

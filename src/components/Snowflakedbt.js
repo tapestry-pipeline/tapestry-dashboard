@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import BarChart from "./BarChart.js"
 import TableList from "./TableList.js"
+import SnowflakeHistory from "./SnowflakeHistory.js"
 import LoadingPage from "./LoadingPage.js"
 
 const Snowflakedbt = () => {
   const [sourceTables, setSourceTables] = useState([]);
-  const [transformedTables, setTransformedTables] = useState([]); 
+  const [transformedTables, setTransformedTables] = useState([]);
+  const [history, setHistory] = useState([]);  
 
   const getTables = async() => {
     return await axios.get(`http://localhost:7777/api/snowflake/gettables`)
@@ -19,11 +21,22 @@ const Snowflakedbt = () => {
     })
   }
 
+  const getHistory = async () => {
+    return await axios.get(`http://localhost:7777/api/snowflake/gethistory`)
+    .then(({ data }) => {
+      setHistory(data); 
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
+
   useEffect(() => {
-    getTables()
+    getTables();
+    getHistory();
   }, []); 
 
-  if (transformedTables.length === 0) {
+  if (transformedTables.length === 0 || history.length === 0) {
     return (
       <>
         <LoadingPage />
@@ -44,6 +57,9 @@ const Snowflakedbt = () => {
           transformedTables={transformedTables}
         /> 
       </div>
+      <SnowflakeHistory
+          history={history}
+      /> 
     </>
   )
 };
