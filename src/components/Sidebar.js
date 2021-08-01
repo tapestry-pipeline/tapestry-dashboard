@@ -12,7 +12,7 @@ const Sidebar = () => {
     <div className="w-64 absolute sm:relative bg-midnightblue shadow h-full flex-col justify-between hidden sm:flex">
       <div className="px-8">
         <div className="h-16 w-full flex items-center mt-5 m-2.5">
-          <img src={tapestry_logo_color} width={144} height={30}></img>
+          <img src={tapestry_logo_color} alt="tapestrylogo" width={144} height={30}></img>
         </div>
       <ul className="mt-12">
 
@@ -33,16 +33,22 @@ const Sidebar = () => {
       <Link to="/airbyte">
         <li className="flex w-full justify-between text-gray-300 hover:text-gray-500 cursor-pointer items-center mb-6">
           <div className="flex items-center">
-            <img className="icon" width={18} height={18} src={airbyte}></img>
+            <img className="icon" width={18} height={18} src={airbyte } alt="airbyteicon"></img>
             <span className="text-sm  ml-2">Data Ingestion</span>
           </div>
         </li>
       </Link>
-      <Link to="/snowflake">
+      <Link to="/snowflakedbt">
         <li className="flex w-full justify-between text-gray-300 hover:text-gray-500 cursor-pointer items-center mb-6">
             <div className="flex items-center">
-            <img className="icon" width={18} height={18} src={snowflake}></img>
-                <span className="text-sm  ml-2">Data Warehouse</span>
+            <div className="grid grid-cols-1 gap-2">
+              <img className="icon" width={18} height={18} src={snowflake} alt="snowflakeicon"></img>
+              <img className="icon" width={18} height={18} src={dbt} alt="dbticon"></img>
+            </div>
+                <span className="text-sm  ml-2">
+                  <p>Data Warehouse</p>
+                  <p>& Data Transformation</p>
+                </span>
             </div>
         </li>
       </Link>
@@ -50,17 +56,8 @@ const Sidebar = () => {
       <Link to="/grouparoo">
         <li className="flex w-full justify-between text-gray-300 hover:text-gray-500 cursor-pointer items-center mb-6">
             <div className="flex items-center">
-              <img className="icon" width={18} height={18} src={grouparoo}></img>
+              <img className="icon" width={18} height={18} src={grouparoo} alt="grouparooeicon"></img>
               <span className="text-sm  ml-2">Data Syncing</span>
-            </div>
-        </li>
-      </Link>
-
-      <Link to="/dbt">
-        <li className="flex w-full justify-between text-gray-300 hover:text-gray-500 cursor-pointer items-center mb-6">
-            <div className="flex items-center">
-              <img className="icon" width={18} height={18} src={dbt}></img>
-                <span className="text-sm  ml-2">Data Transformation</span>
             </div>
         </li>
       </Link>

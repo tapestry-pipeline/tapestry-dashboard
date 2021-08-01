@@ -7,9 +7,9 @@ const Home = () => {
       <>
         <h1>Home</h1>
         <div class="grid grid-cols-3 m-5 items-center">
-          <img src={check} className="icon" width={30} height={30}></img>
-          <img src={check} className="icon" width={30} height={30}></img>
-          <img src={check} className="icon" width={30} height={30}></img>
+          <img src={check} alt="pipeline" className="icon" width={30} height={30}></img>
+          <img src={check} alt="pipeline" className="icon" width={30} height={30}></img>
+          <img src={check} alt="pipeline" className="icon" width={30} height={30}></img>
           <Pipeline/>
           <Pipeline/>
           <Pipeline/>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 // import apiClient from "../apiClient.js"
 // <iframe title="airbyte" src={dns} frameborder="0"></iframe>
 import AllCards from "./AllCards.js"
