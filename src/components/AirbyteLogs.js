@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 
-const Logs = ({ toolTitle }) => {
+const AirbyteLogs = ({ toolTitle }) => {
   const [logs, setLogs] = useState([]);
 
   // const styles = {
@@ -75,8 +75,4 @@ const Logs = ({ toolTitle }) => {
   
 }
 
-export default Logs;
-
-// {logs.map(logLine => {
-//   return <p>{logLine}</p>;
-// })}
+export default AirbyteLogs;

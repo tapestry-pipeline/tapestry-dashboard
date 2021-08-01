@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import apiClient from "../apiClient.js"
-// <iframe title="airbyte" src={dns} frameborder="0"></iframe>
 import AllCards from "./AllCards.js"
 import LoadingPage from "./LoadingPage.js";
 import { appendFile } from "fs";
-import Logs from "./Logs.js"
+import AirbyteLogs from "./AirbyteLogs.js"
+import GrouparooLogs from "./GrouparooLogs.js"
 import CpuGraph from "./CpuGraph.js"
- //     {/* <AllCards cards={cards}/> */}
 
 
 const MonitorPage = ({ toolTitle }) => {
@@ -60,7 +58,8 @@ const MonitorPage = ({ toolTitle }) => {
     </div>
     <div class="grid grid-rows-2 grid-cols-1 gap-4 place-content-around">
       <CpuGraph toolTitle={toolTitle}/>
-      <Logs toolTitle={toolTitle}/>
+      {toolTitle === "airbyte" ? <AirbyteLogs /> : <GrouparooLogs /> }
+      
     </div>
      
     
