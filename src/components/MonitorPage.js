@@ -52,13 +52,15 @@ const MonitorPage = ({ toolTitle }) => {
   return (
     <>
       <div className="w-auto h-auto rounded">
-        <h1>{toolTitle.toUpperCase()}</h1>
+        <h1 className="font-sans text-4xl text-midnightblue p-5 m-5 capitalize">{toolTitle}</h1>
         <a href={dns} target="_blank">Airbyte Link Here</a> 
-        <AllCards cards={cards}/>
       </div>
-      <div class="grid grid-rows-2 grid-cols-1 gap-4 place-content-around">
+      <div class="grid grid-cols-2 gap-4 place-content-around m-5">
+        <AllCards cards={cards}/>
         <CpuGraph toolTitle={toolTitle}/>
-        {toolTitle === "airbyte" ? <AirbyteLogs toolTitle={toolTitle} /> : <GrouparooLogs toolTitle={toolTitle} /> }
+      </div>
+      <div>
+        {toolTitle === "airbyte" ? <AirbyteLogs class="col-span-2" toolTitle={toolTitle} /> : <GrouparooLogs class="col-span-2" toolTitle={toolTitle} /> }
       </div>
     </>
   )

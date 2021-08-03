@@ -47,7 +47,7 @@ const Snowflakedbt = () => {
   return (
     <>
       <h1>Snowflake & dbt</h1>
-      <div class="container mx-auto px-10 space-y-10">
+      <div class="grid grid-flow-row mx-auto px-10 space-y-10">
         <BarChart
           sourceTablesCount={sourceTables.length}
           transformedTablesCount={transformedTables.length}
@@ -56,11 +56,13 @@ const Snowflakedbt = () => {
           sourceTables={sourceTables}
           transformedTables={transformedTables}
         /> 
+        
+      </div>
+      <div class="container mx-auto px-10 space-y-10">
         <SnowflakeHistory
           history={history}
         /> 
       </div>
-      
     </>
   )
 };
