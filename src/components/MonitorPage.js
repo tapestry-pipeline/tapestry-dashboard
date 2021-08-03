@@ -12,6 +12,8 @@ const MonitorPage = ({ toolTitle }) => {
   const [dns, setDns] = useState('');
   const [cards, setCards] = useState([]);
 
+  let buttonLinkstyles = "hover:opacity-90 text-xl w-full xl:text-2xl xl:w-7/12 mt-4 xl:mt-11 f-f-r py-6 text-white text-bold";
+
 // http://test-Airby-TP8W272IWYRO-1669007140.us-west-1.elb.amazonaws.com
   const getDNS = async (title) => {
     return await axios.get(`http://localhost:7777/api/${title}/getdns`)
@@ -51,16 +53,16 @@ const MonitorPage = ({ toolTitle }) => {
 
   return (
     <>
-      <div className="w-auto h-auto rounded">
-        <h1 className="font-sans text-4xl text-midnightblue p-5 m-5 capitalize">{toolTitle}</h1>
-        <a href={dns} target="_blank">Airbyte Link Here</a> 
+      <div className="w-auto h-auto rounded col-span-full">
+        <h1 className="font-sans text-4xl text-midnightblue p-5 m-5 capitalize inline">{toolTitle}</h1>
+        <a href={dns} target="_blank" rel="noreferrer"><button className="hover:opacity-90 text-xl w-full xl:text-2xl xl:w-7/12 mt-4 xl:mt-11 f-f-r py-6 text-white text-bold bg-airbytepurple">{toolTitle} Dashboard Link</button></a> 
       </div>
-      <div class="grid grid-cols-2 gap-4 place-content-around m-5">
+      <div class="col-span-full">
         <AllCards cards={cards}/>
         <CpuGraph toolTitle={toolTitle}/>
       </div>
-      <div>
-        {toolTitle === "airbyte" ? <AirbyteLogs class="col-span-2" toolTitle={toolTitle} /> : <GrouparooLogs class="col-span-2" toolTitle={toolTitle} /> }
+      <div class="col-span-full">
+        {toolTitle === "airbyte" ? <AirbyteLogs class="col-start-1 col-span-2 row-start" toolTitle={toolTitle} /> : <GrouparooLogs class="col-span-2" toolTitle={toolTitle} /> }
       </div>
     </>
   )
