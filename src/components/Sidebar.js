@@ -9,7 +9,7 @@ import tapestry_logo_color from "../assets/images/tapestry_logo_color.png"
 
 const Sidebar = () => {
     return (
-    <div className="w-80 absolute sm:relative bg-midnightblue shadow h-full flex-col justify-between hidden sm:flex">
+    <div className="grid-rows-2 col-span-1 w-80 absolute sm:relative bg-midnightblue shadow h-screen flex-col justify-between hidden sm:flex">
       <div className="px-8">
         <div className="h-16 w-full flex items-center mt-10 m-5">
           <img src={tapestry_logo_color} alt="tapestrylogo" width={160} height={40}></img>

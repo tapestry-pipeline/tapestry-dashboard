@@ -8,9 +8,9 @@ import MonitorPage from "./components/MonitorPage.js";
 
 function App() {
     return (
-      <div className="flex flex-nowrap h-screen">
+      <div className="flex flex-nowrap h-screen grid grid-cols-5 grid-rows-2">
         <Sidebar />
-        <main className="container mx-0 py-10 h-64 md:w-4/5 w-11/12 px-6 h-screen overflow-y-auto">
+        <main className="col-span-4 container mx-0 py-10 h-64 md:w-screen w-screen px-6 h-screen overflow-y-auto">
           <Switch>
             <Route exact path="/" component={Home} /> 
             <Route exact path="/airbyte">
