@@ -8,7 +8,8 @@ function Home() {
         <>
           <div className="relative w-full h-full flex-overflow">
             <div className="relative px-10 ml-5 xl:px-0  container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 pt-16 lg:pt-36 gap-8">
-              <div class="order-1 col-span-1">
+              <div class="order-1 col-span-1
+              ">
                 <h1 className="flex-shrink text-6xl w-1/2 xl:w-full xl:text-8xl text-grouparooblue font-sans f-f-l">Ingest. Transform. Sync.</h1>
               </div>
               <div className=" col-span-1 order-2 flex-auto px-5 ml-15 mt-15">
