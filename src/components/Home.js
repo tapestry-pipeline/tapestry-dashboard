@@ -19,8 +19,8 @@ function Home() {
               <div className="order-3 col-span-1 flex flex-row f-f-r text-xl lg:text-3xl pb-20 sm:pb-0 pt-10 xl:pt-20">
                 <h3 className="font-sans">Your end-to-end user data pipeline is here. Click on our documentation to get started.</h3>
               </div>
-              <Link class="order-4 col-span-1">
-              <a href="" target="_blank"><button className=" hover:opacity-90 text-xl w-full xl:text-2xl xl:w-7/12 mt-4 xl:mt-11 f-f-r py-6 bg-airbytepurple text-white text-bold">Tapestry Documentation</button></a>
+              <Link to="/documentation" class="order-4 col-span-1">
+              <button className=" hover:opacity-90 text-xl w-full xl:text-2xl xl:w-7/12 mt-4 xl:mt-11 f-f-r py-6 bg-airbytepurple text-white text-bold">Tapestry Documentation</button>
               </Link>
             </div>
           </div>
