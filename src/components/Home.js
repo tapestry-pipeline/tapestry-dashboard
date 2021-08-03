@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // import Pipeline from "./Pipeline.js"
 import pipeline from "../assets/images/pipeline_no_words.png"
 
@@ -18,7 +19,9 @@ function Home() {
               <div className="order-3 col-span-1 flex flex-row f-f-r text-xl lg:text-3xl pb-20 sm:pb-0 pt-10 xl:pt-20">
                 <h3 className="font-sans">Your end-to-end user data pipeline is here. Click on our documentation to get started.</h3>
               </div>
+              <Link to="/documentation">
               <button className="order-4 col-span-1 hover:opacity-90 text-xl w-full xl:text-2xl xl:w-7/12 mt-4 xl:mt-11 f-f-r py-6 bg-airbytepurple text-white text-bold">Tapestry Documentation</button>
+              </Link>
             </div>
           </div>
         </>
