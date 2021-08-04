@@ -81,7 +81,7 @@ const CpuGraph = ({ toolTitle }) => {
   }
 
   return (
-    <div class="inline">
+    <div class="w-1/2 float-right">
       <h3 className="text-lg leading-6 font-medium text-gray-900">
           CPU Utilization
       </h3>

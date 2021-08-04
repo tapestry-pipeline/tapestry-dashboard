@@ -57,12 +57,12 @@ const MonitorPage = ({ toolTitle }) => {
         <h1 className="font-sans text-4xl text-midnightblue p-5 m-5 capitalize inline">{toolTitle}</h1>
         <a href={dns} target="_blank" rel="noreferrer"><button className="hover:opacity-90 text-xl w-full xl:text-2xl xl:w-7/12 mt-4 xl:mt-11 f-f-r py-6 text-white text-bold bg-airbytepurple">{toolTitle} Dashboard Link</button></a> 
       </div>
-      <div class="col-span-full">
+      <div class="col-start-1 row-start-2 col-span-2 flex flex-row ">
         <AllCards cards={cards}/>
         <CpuGraph toolTitle={toolTitle}/>
       </div>
-      <div class="col-span-full">
-        {toolTitle === "airbyte" ? <AirbyteLogs class="col-start-1 col-span-2 row-start" toolTitle={toolTitle} /> : <GrouparooLogs class="col-span-2" toolTitle={toolTitle} /> }
+      <div class="col-span-full mt-32">
+        {toolTitle === "airbyte" ? <AirbyteLogs toolTitle={toolTitle} /> : <GrouparooLogs toolTitle={toolTitle} /> }
       </div>
     </>
   )

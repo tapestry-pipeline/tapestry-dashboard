@@ -10,7 +10,7 @@ function App() {
     return (
       <div className="flex flex-nowrap h-screen">
         <Sidebar />
-        <main className="col-span-4 container mx-0 py-10 h-64 md:w-screen w-screen px-6 h-screen grid grid-cols-2 grid-rows-3">
+        <main className="col-span-4 container mx-0 py-10 px-20 h-64 md:w-screen w-screen h-screen grid grid-cols-2 grid-rows-3 overflow-y-auto">
           <Switch>
             <Route exact path="/" component={Home} /> 
             <Route exact path="/airbyte">
