@@ -4,27 +4,24 @@ import Sidebar from "./components/Sidebar.js";
 import Home from "./components/Home.js";
 import Snowflakedbt from "./components/Snowflakedbt.js";
 import Documentation from "./components/Documentation.js";
-import MonitorPage from "./components/MonitorPage.js";
+import AirbytePage from "./components/AirbytePage.js";
+import GrouparooPage from "./components/GrouparooPage.js";
 
 function App() {
-    return (
-      <div className="flex flex-nowrap h-screen">
-        <Sidebar />
-        <main className="col-span-4 container mx-0 py-10 px-20 h-64 md:w-screen w-screen h-screen grid grid-cols-2 grid-rows-3 overflow-y-auto">
-          <Switch>
-            <Route exact path="/" component={Home} /> 
-            <Route exact path="/airbyte">
-              <MonitorPage toolTitle="airbyte" />
-            </Route>
-            <Route exact path="/snowflakedbt" component={Snowflakedbt} />
-            <Route exact path="/grouparoo">
-              <MonitorPage toolTitle="grouparoo" />
-            </Route>
-            <Route exact path="/documentation" component={Documentation} /> 
-          </Switch>
-        </main>
-      </div>
-    );
+  return (
+    <div className="flex">
+      <Sidebar />
+      <main className="w-full h-screen overflow-y-auto">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/airbyte" component={AirbytePage} />
+          <Route exact path="/snowflakedbt" component={Snowflakedbt} />
+          <Route exact path="/grouparoo" component={GrouparooPage} />
+          <Route exact path="/documentation" component={Documentation} /> 
+        </Switch>
+      </main>
+    </div>
+  );
 }
 
 export default App;

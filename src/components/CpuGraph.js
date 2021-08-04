@@ -80,15 +80,23 @@ const CpuGraph = ({ toolTitle }) => {
     }
   }
 
+//   <h3 className="text-lg leading-6 font-medium text-gray-900">
+//   CPU Utilization
+// </h3>
+
   return (
-    <div class="w-1/2 float-right">
-      <h3 className="text-lg leading-6 font-medium text-gray-900">
-          CPU Utilization
-      </h3>
-      <Line
-        data={transformedData}
-        options={chartOptions}
-      />
+    <div class="w-1/2 lg:w-1/2t flex-1">
+      <section class="m-4 bg-white border border-gray-300 border-solid rounded shadow">
+        <header class="border-b border-solid border-gray-300 p-4 text-lg font-medium">
+					CPU Utilization
+				</header>
+        <section class="overflow-x-auto w-full">
+          <Line
+            data={transformedData}
+            options={chartOptions}
+          />
+        </section>
+      </section>
     </div>
   )
 }; 
