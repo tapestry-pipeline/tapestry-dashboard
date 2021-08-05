@@ -43,7 +43,7 @@ const GrouparooLogs = () => {
           <section class="overflow-x-auto w-full">
             <table class="w-full">
               <thead>
-                <tr class="bg-gray-200 text-gray-600 uppercase text-xs leading-normal sticky top-0">
+                <tr class="bg-gray-200 text-gray-600 uppercase text-xs leading-normal">
                   <th class="py-3 px-6 text-left">When</th>
                   <th class="py-3 px-6 text-left">Message</th>
                   <th class="py-3 px-6 text-left">Topic</th>

@@ -4,11 +4,14 @@ import BarChart from "./BarChart.js"
 import TableList from "./TableList.js"
 import SnowflakeHistory from "./SnowflakeHistory.js"
 import LoadingPage from "./LoadingPage.js"
+import dbtLogo from "../assets/images/dbt.png"; 
+import snowflakeLogo from "../assets/images/snowflake.png";
 
 const Snowflakedbt = () => {
   const [sourceTables, setSourceTables] = useState([]);
   const [transformedTables, setTransformedTables] = useState([]);
   const [history, setHistory] = useState([]);  
+  const [dns, setDns] = useState('');
 
   const getTables = async() => {
     return await axios.get(`http://localhost:7777/api/snowflake/gettables`)
@@ -31,6 +34,17 @@ const Snowflakedbt = () => {
     })
   }
 
+  const getDns = async() => {
+    return await axios.get(`http://localhost:7777/api/snowflake/getdns`)
+    .then(({data}) => {
+      console.log(data)
+      setDns(data); 
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
+
   useEffect(() => {
     getTables();
     getHistory();
@@ -46,11 +60,13 @@ const Snowflakedbt = () => {
 
   return (
     <>
-     <header class="flex items-center gap-6 my-10">
-        {/* <img class="inline ml-10" width={50} height={50} src={airbyte} alt="airbyteicon"></img> */}
-        <h1 className="font-sans text-4xl text-midnightblue capitalize inline">Snowflake & DBT</h1>
-        {/* <span class="inline-flex items-center h-6 p-6 rounded text-white text-3xl bg-green-500">{card.value}</span> */}
-        <a href="" target="_blank" rel="noreferrer"><button className="inline-flex items-center px-3 py-1 rounded text-white text-xl bg-airbytepurple">Dashboard Link</button></a>
+     <header class="flex items-center justify-center gap-6 my-10">
+        <img class="inline ml-10" width={50} height={50} src={snowflakeLogo} alt="snowflake-logo"></img>
+        <h1 className="font-sans text-4xl text-midnightblue capitalize inline">Snowflake</h1>
+        <a href={dns} target="_blank" rel="noreferrer"><button className="inline-flex items-center px-3 py-1 rounded text-white text-xl bg-snowflakeblue">Dashboard Link</button></a>
+        <img class="inline ml-10" width={50} height={50} src={dbtLogo} alt="dbt-logo"></img>
+        <h1 className="font-sans text-4xl text-midnightblue capitalize inline">DBT</h1>
+        <a href="https://www.getdbt.com/signup/" target="_blank" rel="noreferrer"><button className="inline-flex items-center px-3 py-1 rounded text-white text-xl bg-dbtorange">Dashboard Link</button></a>
 			</header>
       {/* <h1>Snowflake & dbt</h1> */}
       <div class="flex flex-wrap flex-row">

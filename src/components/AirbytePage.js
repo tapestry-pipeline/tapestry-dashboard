@@ -45,10 +45,12 @@ const AirbytePage = () => {
   
   return (
     <>
-      <header class="flex items-center gap-6 my-10">
+      <header class="flex items-center gap-6 my-10 justify-center">
         <img class="inline ml-10" width={50} height={50} src={airbyteLogo} alt="airbyte-logo"></img>
         <h1 className="font-sans text-4xl text-midnightblue capitalize inline">Airbyte</h1>
-        <a href={dns} target="_blank" rel="noreferrer"><button className="inline-flex items-center px-3 py-1 rounded text-white text-xl bg-airbytepurple">Dashboard Link</button></a>
+        <a href={dns} target="_blank" rel="noreferrer">
+          <button className="inline-flex items-center px-3 py-1 rounded text-white text-xl bg-airbytepurple">Dashboard Link</button>
+        </a>
 			</header>
 
       <AllCards cards={cards}/>

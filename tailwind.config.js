@@ -4,7 +4,9 @@ module.exports = {
       colors: {
         midnightblue: '#0a0440',
         airbytepurple: '#9579fd',
-        grouparooblue: '#29abe2'
+        grouparooblue: '#29abe2',
+        dbtorange: '#ff6949',
+        snowflakeblue: '#32b8ea'
       }
     }, 
     fontFamily: {

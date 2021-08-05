@@ -45,10 +45,12 @@ const GrouparooPage = () => {
   
   return (
     <>
-      <header class="flex items-center gap-6 my-10">
+      <header class="flex items-center gap-6 my-10 justify-center">
         <img class="inline ml-10" width={50} height={50} src={grouparooLogo} alt="grouparoo-logo"></img>
         <h1 className="font-sans text-4xl text-midnightblue capitalize inline">Grouparoo</h1>
-        <a href={dns} target="_blank" rel="noreferrer"><button className="inline-flex items-center px-3 py-1 rounded text-white text-xl bg-grouparooblue">Dashboard Link</button></a>
+        <a href={dns} target="_blank" rel="noreferrer">
+          <button className="inline-flex items-center px-3 py-1 rounded text-white text-xl bg-grouparooblue">Dashboard Link</button>
+        </a>
 			</header>
 
       <AllCards cards={cards}/>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Line } from "react-chartjs-2";
 
-
 const CpuGraph = ({ toolTitle }) => {
   const [cpu, setCpu] = useState([]); 
 
@@ -36,6 +35,9 @@ const CpuGraph = ({ toolTitle }) => {
     return (currentHours - hours).toFixed(2); 
   })
 
+  const backgroundColor = toolTitle === 'airbyte' ? '#9579fd' : '#29abe2';
+  const borderColor = toolTitle === 'airbyte' ? 'r#9579fd' : 'r#29abe2';
+
   const transformedData = {
     labels: xAxisData,
     datasets: [
@@ -43,8 +45,8 @@ const CpuGraph = ({ toolTitle }) => {
         label: "CPU Average Usage",
         fill: true,
         lineTension: 0.25,
-        backgroundColor: "#9579fd",
-        borderColor: "r#9579fd",
+        backgroundColor,
+        borderColor,
         borderWidth: 2,
         data: yAxisData,
       }

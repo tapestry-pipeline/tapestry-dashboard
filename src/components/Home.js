@@ -20,7 +20,7 @@ function Home() {
                 <h3 className="font-sans">Your end-to-end user data pipeline is here. Click on our documentation to get started.</h3>
               </div>
               <Link to="/documention" class="order-4 col-span-2 row-span-1 col-start-2 col-end-4">
-              <button className=" hover:opacity-90 text-xl w-full xl:text-2xl xl:w-7/12 mt-4 xl:mt-11 f-f-r py-6 bg-airbytepurple text-white text-bold">Tapestry Documentation</button>
+                <button className=" hover:opacity-90 text-xl w-full xl:text-2xl xl:w-7/12 mt-4 xl:mt-11 f-f-r py-6 bg-airbytepurple rounded text-white text-bold">Tapestry Documentation</button>
               </Link>
             </div>
           </div>

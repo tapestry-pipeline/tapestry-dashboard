@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="flex">
       <Sidebar />
-      <main className="w-full h-screen overflow-y-auto">
+      <main className="w-full h-screen overflow-y-auto py-8 px-14">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/airbyte" component={AirbytePage} />
