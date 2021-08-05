@@ -40,9 +40,9 @@ const BarChart = ({sourceTablesCount, transformedTablesCount}) => {
   };
 
   return (
-    <>
+    <section class="m-4 bg-white border border-gray-300 border-solid rounded shadow">
       <Bar data={data} options={options} />
-    </>
+   </section>
   )
 }  
 

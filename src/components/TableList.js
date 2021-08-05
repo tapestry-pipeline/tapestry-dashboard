@@ -2,9 +2,15 @@ import React from "react";
 
 const TableList = ({sourceTables, transformedTables}) => {
   return (
-    <div class="h-96 w-full overflow-y-auto">
+    // <div class="h-96 w-full overflow-y-auto">
+    <section class="m-4 bg-white border border-gray-300 border-solid rounded shadow inset-0 absolute overflow-auto">
+      {/* <header class="border-b border-solid border-gray-300 p-4 text-lg font-medium sticky top-0 bg-white">
+        Logs
+      </header> */}
+    {/* <section class="overflow-x-auto w-full"> */}
+    <section class=" flex flex-row flex-wrap items-center text-center border-b border-solid border-gray-300">
       <table class="w-full table-auto">
-        <thead>
+        <thead class="border-b border-solid border-gray-300 p-4 text-lg font-medium sticky top-0 bg-white">
           <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal sticky top-0">
               <th class="py-3 px-6 text-left">Source Tables</th>
               <th class="py-3 px-6 text-left">Transformed Tables</th>
@@ -31,7 +37,8 @@ const TableList = ({sourceTables, transformedTables}) => {
           ))}
           </tbody>
       </table>
-    </div>
+     </section>
+    </section>
   )
 }
 
