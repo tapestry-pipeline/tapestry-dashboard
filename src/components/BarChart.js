@@ -9,12 +9,12 @@ const BarChart = ({sourceTablesCount, transformedTablesCount}) => {
         label: '# of Tables',
         data: [sourceTablesCount, transformedTablesCount],
         backgroundColor: [
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
+          'rgba(50, 184, 234, 0.2)',
+          'rgba(255, 105, 73, 0.2)',
         ],
         borderColor: [
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 159, 64, 1)',
+          'rgba(50, 184, 234, 1)',
+          'rgba(255, 105, 73, 1)',
         ],
         borderWidth: 1,
       },
@@ -23,25 +23,20 @@ const BarChart = ({sourceTablesCount, transformedTablesCount}) => {
   
   const options = {
     indexAxis: 'y',
-    // Elements options apply to all of the options unless overridden in a dataset
-    // In this case, we are setting the border of each horizontal bar to be 2px wide
     elements: {
       bar: {
         borderWidth: 2,
       },
     },
     responsive: true,
-    plugins: {
-      title: {
-        display: true,
-        text: 'Snowflake Warehouse Data',
-      },
-    },
   };
 
   return (
     <section class="m-4 bg-white border border-gray-300 border-solid rounded shadow">
-      <Bar data={data} options={options} />
+      <header class="border-b border-solid border-gray-300 p-4 text-lg font-medium">
+        Snowflake Data Warehouse
+      </header>
+      <Bar class="" data={data} options={options} />
    </section>
   )
 }  

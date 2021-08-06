@@ -29,7 +29,7 @@ const AirbyteLogs = ({ toolTitle }) => {
         </header>
         <section class="overflow-x-auto w-full">
           <table class="w-full">
-            <tbody class="text-gray-600 text-sm font-light">
+            <tbody class="text-gray-600 text-sm">
               {logs.map((logLine, index) => (
                   <tr key={index} class="border-b border-gray-200 hover:bg-gray-100">
                     <td class="py-3 px-6 text-left whitespace-normal">

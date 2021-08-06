@@ -28,7 +28,7 @@ const AllCards =({cards}) => {
               <Card card={card} key={index}/>
             )
         })}
-        </section>
+      </section>
     </section>
   );
 }

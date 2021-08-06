@@ -9,7 +9,7 @@ import GrouparooPage from "./components/GrouparooPage.js";
 
 function App() {
   return (
-    <div className="flex">
+    <div className="flex font-sans">
       <Sidebar />
       <main className="w-full h-screen overflow-y-auto py-8 px-14">
         <Switch>
