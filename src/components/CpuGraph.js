@@ -8,7 +8,6 @@ const CpuGraph = ({ toolTitle }) => {
   const getCPU = async (title) => {
     return await axios.get(`http://localhost:7777/api/${title}/cpu`)
       .then(({ data }) => {
-        console.log(data); 
         setCpu(data); 
       })
       .catch(error => {

@@ -9,7 +9,6 @@ const AirbyteLogs = ({ toolTitle }) => {
     return await axios.get(`http://localhost:7777/api/${title}/getlogs`)
       .then(({data}) => {
         const lines = data.split('\n');
-        console.log(lines)
         setLogs(lines);
       })
       .catch(error => {

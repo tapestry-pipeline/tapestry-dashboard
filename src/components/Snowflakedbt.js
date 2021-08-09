@@ -38,7 +38,7 @@ const Snowflakedbt = () => {
     return await axios.get(`http://localhost:7777/api/snowflake/getdns`)
     .then(({data}) => {
       console.log(data)
-      setDns(data); 
+      setDns(data.dns); 
     })
     .catch(error => {
       console.log(error)
