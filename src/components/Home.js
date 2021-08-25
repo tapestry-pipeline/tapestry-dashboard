@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import pipeline from "../assets/images/pipeline_no_words.png"
 
 function Home() {
@@ -18,11 +17,11 @@ function Home() {
         <div className="f-f-r text-xl lg:text-3xl pb-20 sm:pb-0 pt-10 xl:pt-20">
           <h3 className="font-sans">Your end-to-end user data pipeline is here. Click on our documentation to get started.</h3>
         </div>
-        <Link to="/documentation" >
+        <a href="https://tapestry-pipeline.github.io/documentation/" rel="noreferrer" target="_blank">
           <button className="hover:opacity-90 text-xl py-6 px-10 mt-10 bg-midnightblue rounded text-white text-bold">
             Tapestry Documentation
           </button>
-        </Link>
+        </a>
       </div>
     </>
   );

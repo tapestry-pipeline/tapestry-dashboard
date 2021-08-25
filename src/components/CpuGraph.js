@@ -17,13 +17,9 @@ const CpuGraph = ({ toolTitle }) => {
 
   useEffect(() => {
     getCPU(toolTitle); 
-  }); 
+  }, [toolTitle]);
 
-  if (cpu.length === 0) {
-    return (
-      <div></div>
-    )
-  }
+  if (cpu.length === 0) return null;
 
   const sortedData = cpu.sort((a, b) => Date.parse(a.Timestamp) - Date.parse(b.Timestamp)); 
   const yAxisData = sortedData.map(obj => obj.Average.toFixed(2));
