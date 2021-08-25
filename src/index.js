@@ -5,7 +5,6 @@ import App from './App';
 import './assets/main.css';
 import reportWebVitals from './reportWebVitals';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -14,6 +13,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
 
 reportWebVitals();

@@ -30,8 +30,7 @@ const GrouparooLogs = () => {
 
   useEffect(() => {
     getLogs('grouparoo')
-  }, []);
-
+  });
 
   return (
     <>
@@ -91,17 +90,5 @@ const GrouparooLogs = () => {
     </>
   );
 }
-
-// {/* <div class="h-9">
-//             <div class="w-full lg:w-5/6 h-full">
-//               <div class="bg-white shadow-md rounded my-6"> */}
-//               <div class="h-96 w-full overflow-y-auto">
-//                 <table class="w-full table-auto">
-                  
-//                   </table>
-//                 </div>
-//               {/* </div>
-//             </div>
-//         </div> */}
 
 export default GrouparooLogs;

@@ -1,12 +1,7 @@
 import React from "react"; 
 
 const SnowflakeHistory = ({history}) => {
-  // <section class="m-4 bg-white border border-gray-300 border-solid rounded shadow inset-0 absolute overflow-y-auto">
-  // {/* <div class="h-96 w-full overflow-y-auto"> */}
-    // {/* <section class=" flex flex-row flex-wrap items-center text-center border-b border-solid border-gray-300"> */}
-  
   return (
-    
     <>
     <section class="m-4 bg-white border border-gray-300 border-solid rounded shadow inset-0 overflow-y-auto h-96">
       <table class="w-full table-auto">

@@ -37,8 +37,7 @@ const Snowflakedbt = () => {
   const getDns = async() => {
     return await axios.get(`http://localhost:7777/api/snowflake/getdns`)
     .then(({data}) => {
-      console.log(data)
-      setDns(data.dns); 
+      setDns(data.dns);
     })
     .catch(error => {
       console.log(error)
@@ -48,6 +47,7 @@ const Snowflakedbt = () => {
   useEffect(() => {
     getTables();
     getHistory();
+    getDns();
   }, []); 
 
   if (transformedTables.length === 0 || history.length === 0) {
@@ -89,12 +89,3 @@ const Snowflakedbt = () => {
 };
 
 export default Snowflakedbt
-
-
-
-// Snowflake - deny
-// DBT - same origin
-// weather - same origin
-// AWS - same origin
-
-

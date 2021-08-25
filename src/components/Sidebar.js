@@ -12,9 +12,11 @@ const Sidebar = () => {
     <div className="grid-rows-2 col-span-1 w-80 absolute sm:relative bg-midnightblue shadow h-screen flex-col justify-between hidden sm:flex">
       <div className="px-8">
         <div className="h-16 w-full flex items-center mt-10 m-5">
-          <img src={tapestry_logo_color} alt="tapestrylogo" width={160} height={40}></img>
+          <Link to="/">
+            <img src={tapestry_logo_color} alt="tapestrylogo" width={160} height={40}></img>
+          </Link>
         </div>
-        
+
         <ul className="mt-12">
           <Link to="/">
             <li className="flex w-full justify-between text-gray-300 hover:text-gray-500 cursor-pointer items-center mb-6 py-4">

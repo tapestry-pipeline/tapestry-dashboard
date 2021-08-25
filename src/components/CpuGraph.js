@@ -17,7 +17,7 @@ const CpuGraph = ({ toolTitle }) => {
 
   useEffect(() => {
     getCPU(toolTitle); 
-  }, []); 
+  }); 
 
   if (cpu.length === 0) {
     return (
@@ -81,10 +81,6 @@ const CpuGraph = ({ toolTitle }) => {
     }
   }
 
-//   <h3 className="text-lg leading-6 font-medium text-gray-900">
-//   CPU Utilization
-// </h3>
-
   return (
     <div class="w-1/2 lg:w-1/2t flex-1">
       <section class="m-4 bg-white border border-gray-300 border-solid rounded shadow">
@@ -103,57 +99,3 @@ const CpuGraph = ({ toolTitle }) => {
 }; 
 
 export default CpuGraph;
-
-
-// const mockData = [
-  //   {
-  //     Timestamp: '2021-07-30T22:24:00+00:00',
-  //     Average: 2.5109026821159806,
-  //     Unit: 'Percent'
-  //   },
-  //   {
-  //     Timestamp: '2021-07-30T15:54:00+00:00',
-  //     Average: 1.2849325429903327,
-  //     Unit: 'Percent'
-  //   },
-  //   {
-  //     Timestamp: '2021-07-30T20:39:00+00:00',
-  //     Average: 1.3748644034753092,
-  //     Unit: 'Percent'
-  //   },
-  //   {
-  //     Timestamp: '2021-07-30T18:54:00+00:00',
-  //     Average: 1.3597315772048206,
-  //     Unit: 'Percent'
-  //   },
-  //   {
-  //     Timestamp: '2021-07-31T03:09:00+00:00',
-  //     Average: 1.4365279637663382,
-  //     Unit: 'Percent'
-  //   },
-  //   {
-  //     Timestamp: '2021-07-30T16:24:00+00:00',
-  //     Average: 1.2766015251150014,
-  //     Unit: 'Percent'
-  //   },
-  //   {
-  //     Timestamp: '2021-07-30T22:54:00+00:00',
-  //     Average: 1.4281436966877536,
-  //     Unit: 'Percent'
-  //   },
-  //   {
-  //     Timestamp: '2021-07-30T19:24:00+00:00',
-  //     Average: 1.3879158642407128,
-  //     Unit: 'Percent'
-  //   },
-  //   {
-  //     Timestamp: '2021-07-30T21:09:00+00:00',
-  //     Average: 4.6840449507579114,
-  //     Unit: 'Percent'
-  //   },
-  //   {
-  //     Timestamp: '2021-07-31T01:54:00+00:00',
-  //     Average: 1.3979696068485066,
-  //     Unit: 'Percent'
-  //   }
-  // ]
