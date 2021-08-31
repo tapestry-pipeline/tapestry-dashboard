@@ -6,7 +6,6 @@ import snowflake from "../assets/images/snowflake.png";
 import dbt from "../assets/images/dbt.png"; 
 import tapestry_logo_color from "../assets/images/tapestry_logo_color.png"
 
-
 const Sidebar = () => {
   return (
     <div className="grid-rows-2 col-span-1 w-80 absolute sm:relative bg-midnightblue shadow h-screen flex-col justify-between hidden sm:flex">
